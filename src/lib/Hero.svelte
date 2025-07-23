@@ -1,31 +1,86 @@
 <script>
   import Button from "./Button.svelte";
-  import Globe from "./Globe.svelte";
   import Header from "./Header.svelte";
+
+  let { route } = $props();
+
+  function getHeroContent(route) {
+    switch (route) {
+      case "/services":
+        return {
+          title: "Services",
+          description:
+            "Explore our wide range of professional ICT and telecom services.",
+        };
+      case "/product":
+        return {
+          title: "Product",
+          description:
+            "Discover our innovative products designed to connect the world.",
+        };
+      case "/about":
+        return {
+          title: "About Us",
+          description:
+            "Learn more about our mission to transform communications.",
+        };
+      case "/contact-us":
+        return {
+          title: "Contact Us",
+          description: "Get in touch with us to discuss your technology needs.",
+        };
+      default:
+        return {
+          title: "Your BEST link to the Future of Communications!",
+          description: `Delivering cutting-edge ICT solutions, telecommunications services, 
+                        and innovative products that empower a better, connected life — driving technology forward.`,
+        };
+    }
+  }
+
+  let heroContent = $derived(getHeroContent(route));
 </script>
 
-<section class="relative bg-[#0a0e30]">
+<section
+  class="relative bg-[#0a0e30] transition-all duration-750 ease-in-out {route !==
+  '/'
+    ? ' mt-8 mx-4 md:mx-16 mb-10 rounded-3xl shadow-lg overflow-hidden'
+    : ''}"
+>
   <!-- Hero -->
-  <div class="relative h-175 md:h-screen overflow-hidden">
+  <div
+    class="relative {route !== '/'
+      ? 'h-150'
+      : ' h-175 md:h-screen'}  overflow-hidden"
+  >
     <header
       class="absolute bottom-0 left-0 md:w-[650px] z-999 px-4 md:px-16 py-16"
     >
-      <h1 class="text-white text-4xl font-bold lg:text-8xl">
-        Your BEST link to the Future of Communications!
+      <h1
+        class="text-white text-4xl font-bold {route !== '/'
+          ? 'lg:text-7xl'
+          : 'lg:text-8xl'}"
+      >
+        {heroContent.title}
       </h1>
 
       <p class="text-white text-sm md:text-lg my-4">
-        Delivering cutting-edge ICT solutions, telecommunications services, and
-        innovative products that empower a better, connected life — driving
-        technology forward.
+        {heroContent.description}
       </p>
       <Button text="Contact Us" />
     </header>
-
-    <Globe />
+    <spline-viewer
+      url="https://prod.spline.design/0TcuxsszFRJmc6N0/scene.splinecode"
+    ></spline-viewer>
     <div class="bg-gradient"></div>
   </div>
 </section>
+<svelte:head>
+  <script
+    type="module"
+    src="https://unpkg.com/@splinetool/viewer@1.10.35/build/spline-viewer.js"
+  ></script>
+</svelte:head>
 
 <style>
   .bg-gradient {

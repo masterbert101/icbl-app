@@ -29,9 +29,7 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.11",
-		"tailwindcss": "^4.1.11",
-		"three": "^0.178.0",
-		"three-globe": "^2.43.0",
-		"three-glow-mesh": "^0.1.2"
+		"nodemailer": "^7.0.5",
+		"tailwindcss": "^4.1.11"
 	}
 }
