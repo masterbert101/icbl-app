@@ -188,7 +188,7 @@
   ];
 </script>
 
-<section class="mx-auto lg:max-w-screen-2xl pb-10 md:pb-20">
+<section class="mx-auto lg:max-w-screen-2xl pb-10 md:pb-20 px-4">
   <div class="text-center mb-12">
     <h2 class="text-4xl font-bold text-gray-900 mb-4">
       Our Product Categories

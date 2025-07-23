@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   import Header from "$lib/Header.svelte";
   import Hero from "$lib/Hero.svelte";
   let { children } = $props();
@@ -9,7 +10,11 @@
   let route = $derived(page.route.id);
 </script>
 
-<Header />
+<Header {route} />
 <Hero {route} />
-{@render children()}
+{#key route}
+  <div in:fade={{ duration: 1000 }}>
+    {@render children()}
+  </div>
+{/key}
 <Footer />

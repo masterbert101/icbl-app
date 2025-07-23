@@ -1,4 +1,5 @@
 <script>
+  import { fade } from "svelte/transition";
   import Button from "./Button.svelte";
   import Header from "./Header.svelte";
 
@@ -42,9 +43,9 @@
 </script>
 
 <section
-  class="relative bg-[#0a0e30] transition-all duration-750 ease-in-out {route !==
+  class="relative bg-[#0a0e30] transition-all duration-1000 ease-in-out {route !==
   '/'
-    ? ' mt-8 mx-4 md:mx-16 mb-10 rounded-3xl shadow-lg overflow-hidden'
+    ? ' mt-4 md:mt-8 mx-4 md:mx-16 mb-8 md:mb-10 rounded-3xl shadow-lg overflow-hidden'
     : ''}"
 >
   <!-- Hero -->
@@ -53,22 +54,25 @@
       ? 'h-150'
       : ' h-175 md:h-screen'}  overflow-hidden"
   >
-    <header
-      class="absolute bottom-0 left-0 md:w-[650px] z-999 px-4 md:px-16 py-16"
-    >
-      <h1
-        class="text-white text-4xl font-bold {route !== '/'
-          ? 'lg:text-7xl'
-          : 'lg:text-8xl'}"
+    {#key route}
+      <header
+        class="absolute bottom-0 left-0 md:w-[650px] z-99 px-6 md:px-16 py-10 md:py-16"
+        in:fade={{ duration: 750 }}
       >
-        {heroContent.title}
-      </h1>
+        <h1
+          class="text-white text-4xl font-bold {route !== '/'
+            ? 'lg:text-7xl'
+            : 'lg:text-8xl'}"
+        >
+          {heroContent.title}
+        </h1>
 
-      <p class="text-white text-sm md:text-lg my-4">
-        {heroContent.description}
-      </p>
-      <Button text="Contact Us" />
-    </header>
+        <p class="text-white text-sm md:text-lg my-4">
+          {heroContent.description}
+        </p>
+        <Button text="Contact Us" />
+      </header>
+    {/key}
     <spline-viewer
       url="https://prod.spline.design/0TcuxsszFRJmc6N0/scene.splinecode"
     ></spline-viewer>
@@ -89,7 +93,7 @@
     height: 30%;
     width: 100%;
     pointer-events: none;
-    z-index: 99;
+    z-index: 9;
     background: linear-gradient(
       180deg,
       rgba(255, 254, 254, 0) 0%,

@@ -189,9 +189,9 @@
 
   let news = [
     { src: "news1.webp", title: "News 1", excerpt: "Lorem ipsum lorem ipsum" },
-    { src: "news1.webp", title: "News 2", excerpt: "Lorem ipsum lorem ipsum" },
-    { src: "news3.webp", title: "News 3", excerpt: "Lorem ipsum lorem ipsum" },
-    { src: "news3.webp", title: "News 4", excerpt: "Lorem ipsum lorem ipsum" },
+    // { src: "news1.webp", title: "News 2", excerpt: "Lorem ipsum lorem ipsum" },
+    // { src: "news3.webp", title: "News 3", excerpt: "Lorem ipsum lorem ipsum" },
+    { src: "news3.webp", title: "News 2", excerpt: "Lorem ipsum lorem ipsum" },
   ];
 
   let container = $state();
@@ -259,7 +259,7 @@
 </section>
 
 <!-- ICBL client -->
-<section class="pt-8 px-4 items-center md:pt-12 md:p-12 max-w-7xl mx-auto">
+<section class="py-4 px-4 items-center md:px-12 max-w-7xl mx-auto">
   <div class="text-left md:text-center mb-12 w-full">
     <div class="">
       <h2 class="text-sm font-bold my-2">ICBL CLIENTS</h2>
@@ -288,7 +288,7 @@
 
 <!--news and update -->
 <section
-  class="pt-8 px-4 md:pt-12 md:p-12 grid gap-8 md:grid-cols-[2fr_3fr] max-w-7xl mx-auto"
+  class="py-8 pb-12 px-4 md:pt-16 md:px-12 grid gap-8 md:grid-cols-[2fr_3fr] max-w-7xl mx-auto"
 >
   <div class="text-left w-full">
     <div class="clients-text-wrapper">

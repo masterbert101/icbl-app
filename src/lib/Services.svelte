@@ -29,22 +29,29 @@
 </script>
 
 <section class="px-4 pb-10 md:pb-20 mx-auto lg:max-w-screen-2xl" id="services">
-  <header class="py-4">
-    <h2 class="text-primary text-4xl font-bold">Services we Offer</h2>
+  <header class="py-4 text-center">
+    <h2 class="text-primary text-4xl font-bold">Services We Offer</h2>
 
-    <p class="text-primary text-sm md:text-lg my-4">Lorem ipSum</p>
+    <p class="text-primary text-sm md:text-lg my-4">
+      From reliable network solutions to scalable ICT support, our expert
+      services are designed to help businesses stay connected, competitive, and
+      future-ready. Whether you're upgrading infrastructure or streamlining
+      communication, we deliver the service you can trust.
+    </p>
   </header>
-  <div class="grid gap-15">
+  <div class="grid gap-8 md:gap-15">
     <div
-      class="container px-4 shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)]
- py-16 px-16 rounded-[2rem]"
+      class="container shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)]
+ py-10 px-8 md:p-16 rounded-[2rem]"
     >
       <div class="grid lg:grid-cols-2 sm:gap-4 gap-10 items-center">
         <div>
-          <p class="text-[#110467] sm:text-sm uppercase font-bold text-18 mb-3">
+          <p class="text-[#110467] sm:text-sm uppercase font-bold text-sm mb-3">
             Services
           </p>
-          <h2 class="text-primary sm:text-2xl text-30 font-semibold mb-8">
+          <h2
+            class="text-primary sm:text-2xl text-lg font-semibold mb-6 md:mb-8"
+          >
             PROFESSIONAL SERVICES
           </h2>
           <div class="grid sm:grid-cols-2 lg:w-70% text-nowrap sm:gap-8 gap-5">
@@ -90,26 +97,26 @@
     </div>
 
     <div
-      class="container px-4 shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)]
- py-16 px-16 rounded-[2rem]"
+      class="container shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)]
+ py-10 px-8 md:p-16 rounded-[2rem]"
     >
       <div class="grid lg:grid-cols-2 sm:gap-4 gap-10 items-center">
-        <div>
-          <div>
-            <img
-              class="-mr-5"
-              width="625"
-              height="580"
-              src="/services2.webp"
-              alt="service page"
-            />
-          </div>
+        <div class="order-2 md:order-1">
+          <img
+            class="-mr-5"
+            width="625"
+            height="580"
+            src="/services2.webp"
+            alt="service page"
+          />
         </div>
-        <div>
-          <p class="text-[#110467] sm:text-sm uppercase font-bold text-18 mb-3">
+        <div class="md:order-2 order-1">
+          <p class="text-[#110467] sm:text-sm uppercase font-bold text-sm mb-3">
             Services
           </p>
-          <h2 class="text-primary sm:text-2xl text-30 font-semibold mb-8">
+          <h2
+            class="text-primary sm:text-2xl text-lg font-semibold mb-6 md:mb-8"
+          >
             MANAGED SERVICES
           </h2>
           <div class="grid sm:grid-cols-2 lg:w-70% text-nowrap sm:gap-10 gap-5">
