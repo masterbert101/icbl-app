@@ -10,12 +10,14 @@
       case "/services":
         return {
           title: "Services",
-          description:
-            "Explore our wide range of professional ICT and telecom services.",
+          description: `From reliable network solutions to scalable ICT support, our expert
+      services are designed to help businesses stay connected, competitive, and
+      future-ready. Whether you're upgrading infrastructure or streamlining
+      communication, we deliver the service you can trust.`,
         };
       case "/product":
         return {
-          title: "Product",
+          title: "Products We offer",
           description:
             "Discover our innovative products designed to connect the world.",
         };
@@ -76,7 +78,7 @@
     <spline-viewer
       url="https://prod.spline.design/0TcuxsszFRJmc6N0/scene.splinecode"
     ></spline-viewer>
-    <div class="bg-gradient"></div>
+    <div class="bg-gradient" class:bg-route={route !== "/"}></div>
   </div>
 </section>
 <svelte:head>
@@ -100,5 +102,9 @@
       rgb(10, 14, 48) 80%,
       rgb(10, 14, 48) 100%
     );
+  }
+
+  .bg-route {
+    height: 37%;
   }
 </style>

@@ -1,4 +1,6 @@
 <script>
+  import { onMount, onDestroy } from "svelte";
+
   let professionalServices = [
     "In-house Voice or Data Wiring",
     "Structured Cabling",
@@ -26,6 +28,60 @@
     "Annual Maintenance Agreement",
     "On-Call Services/24 Hour Support",
   ];
+
+  let movingServices = [
+    { src: "icblemployees01.webp", alt: "ICBL Employees 01" },
+    { src: "icblemployees02.webp", alt: "ICBL Employees 02" },
+    { src: "icblemployees03.webp", alt: "ICBL Employees 03" },
+    { src: "icblemployees04.webp", alt: "ICBL Employees 04" },
+    { src: "icblemployees05.webp", alt: "ICBL Employees 05" },
+    { src: "icblemployees06.webp", alt: "ICBL Employees 06" },
+    { src: "icblemployees07.webp", alt: "ICBL Employees 07" },
+    { src: "icblemployees08.webp", alt: "ICBL Employees 08" },
+    { src: "icblemployees09.webp", alt: "ICBL Employees 09" },
+    { src: "icblemployees10.webp", alt: "ICBL Employees 10" },
+    { src: "icblemployees11.webp", alt: "ICBL Employees 11" },
+    { src: "icblemployees12.webp", alt: "ICBL Employees 12" },
+    { src: "icblemployees13.webp", alt: "ICBL Employees 13" },
+  ];
+
+  let container = $state();
+  let track = $state();
+  let speed = $state(60);
+  let pos = $state(0);
+  let start = $state(null);
+  let rafId;
+  let trackWidth = $state(0);
+
+  function animate(timestamp) {
+    if (!start) start = timestamp;
+
+    const elapsed = timestamp - start;
+    pos = -(elapsed / 1000) * speed;
+
+    if (Math.abs(pos) >= trackWidth) {
+      start = timestamp;
+      pos = 0;
+    }
+
+    container.style.transform = `translateX(${pos}px)`;
+    rafId = requestAnimationFrame(animate);
+  }
+
+  onMount(() => {
+    if (typeof window !== "undefined") {
+      trackWidth = track.getBoundingClientRect().width;
+      container.style.width = `${trackWidth}px`;
+      rafId = requestAnimationFrame(animate);
+    }
+  });
+
+  onDestroy(() => {
+    if (typeof window !== "undefined") {
+      cancelAnimationFrame(rafId);
+      if (container) container.style.transform = "";
+    }
+  });
 </script>
 
 <section class="px-4 pb-10 md:pb-20 mx-auto lg:max-w-screen-2xl" id="services">
@@ -39,12 +95,86 @@
       communication, we deliver the service you can trust.
     </p>
   </header>
+
+  <!-- Moving banner -->
+  <section
+    class="pt-2 pb-6 px-0 md:pt-8 md:pb-16 relative flex gap-4 items-center"
+  >
+    <div class="wrapper">
+      <div class="marquee">
+        <div bind:this={container} class="marquee-container">
+          <div bind:this={track} class="marquee-track">
+            {#each movingServices as { src, alt }}
+              <div class="marquee-item">
+                <img
+                  class="block max-w-full object-cover rounded-md"
+                  {src}
+                  {alt}
+                  width="400"
+                  height="250"
+                />
+              </div>
+            {/each}
+          </div>
+          <!-- duplicate for looping effect -->
+          <div class="marquee-track" aria-hidden="true">
+            {#each movingServices as { src, alt }}
+              <div class="marquee-item">
+                <img
+                  class="block max-w-full object-cover rounded-md"
+                  {src}
+                  {alt}
+                  width="400"
+                  height="250"
+                />
+              </div>
+            {/each}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="grid gap-8 md:gap-15">
     <div
-      class="container shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)]
- py-10 px-8 md:p-16 rounded-[2rem]"
+      class="relative overflow-hidden container shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)]
+ py-8 px-8 md:py-16 md:px-16 rounded-[2rem]"
     >
-      <div class="grid lg:grid-cols-2 sm:gap-4 gap-10 items-center">
+      <div class="svg-wrapper">
+        <svg
+          width="1050"
+          height="1050"
+          viewBox="0 0 750 750"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="branch-bg-gradientcolor"
+        >
+          <defs>
+            <filter id="blurFilterOne" x="-20" y="-20" width="200" height="200">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="50" />
+            </filter>
+          </defs>
+          <circle
+            cx="220"
+            cy="350"
+            r="125"
+            fill="#014e89"
+            filter="url(#blurFilterOne)"
+          />
+
+          <circle
+            cx="380"
+            cy="335"
+            r="125"
+            fill="#46a8c3"
+            filter="url(#blurFilterOne)"
+          />
+        </svg>
+      </div>
+
+      <div
+        class="grid lg:grid-cols-2 sm:gap-4 gap-10 items-center relative z-99"
+      >
         <div>
           <p class="text-[#110467] sm:text-sm uppercase font-bold text-sm mb-3">
             Services
@@ -97,10 +227,43 @@
     </div>
 
     <div
-      class="container shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)]
- py-10 px-8 md:p-16 rounded-[2rem]"
+      class="relative overflow-hidden container shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)]
+ py-8 px-8 md:py-16 md:px-16 rounded-[2rem]"
     >
-      <div class="grid lg:grid-cols-2 sm:gap-4 gap-10 items-center">
+      <div class="svg-wrapper-2">
+        <svg
+          width="1050"
+          height="1050"
+          viewBox="0 0 850 850"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="branch-bg-gradientcolor"
+        >
+          <defs>
+            <filter id="blurFilterOne" x="-20" y="-20" width="200" height="200">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="50" />
+            </filter>
+          </defs>
+          <circle
+            cx="320"
+            cy="250"
+            r="120"
+            fill="#4a4bf6"
+            filter="url(#blurFilterOne)"
+          />
+
+          <circle
+            cx="180"
+            cy="235"
+            r="125"
+            fill="#f2dbfc"
+            filter="url(#blurFilterOne)"
+          />
+        </svg>
+      </div>
+      <div
+        class="grid lg:grid-cols-2 sm:gap-4 gap-10 items-center relative z-99"
+      >
         <div class="order-2 md:order-1">
           <img
             class="-mr-5"
@@ -151,3 +314,82 @@
     </div>
   </div>
 </section>
+
+<style lang="scss">
+  .wrapper {
+    display: grid;
+    place-content: center;
+    height: 100%;
+  }
+
+  .marquee {
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(
+      var(--mask-direction, to right),
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 10%,
+      hsl(0 0% 0% / 1) 90%,
+      hsl(0 0% 0% / 0)
+    );
+  }
+
+  .marquee-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .marquee-track {
+    display: flex;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    .marquee-container {
+      transform: translate3d(0, 0, 0) scale(1);
+      perspective: 1px;
+    }
+  }
+
+  .marquee-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 400px;
+    margin-inline-end: 1.5rem;
+  }
+
+  .svg-wrapper {
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    opacity: 1;
+    scale: 1.275;
+    animation: rotate_move 35s infinite;
+    transition: opacity 100ms ease-in-out;
+  }
+
+  @keyframes rotate_move {
+    50% {
+      transform: rotate(180deg);
+    }
+  }
+
+  .svg-wrapper-2 {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    opacity: 1;
+    scale: 1.275;
+    animation: rotate_move 35s infinite;
+    transition: opacity 100ms ease-in-out;
+  }
+
+  @keyframes rotate_move {
+    50% {
+      transform: rotate(180deg);
+    }
+  }
+</style>

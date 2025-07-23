@@ -186,6 +186,17 @@
       ],
     },
   ];
+
+  function getColor(index) {
+    const hue = 210 + Math.random() * 60 * index;
+
+    const saturation = 50 + Math.random() * 50 + index;
+
+    const lightness = 60 + Math.random() * 30 + index;
+
+    // Return color in HSL format
+    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+  }
 </script>
 
 <section class="mx-auto lg:max-w-screen-2xl pb-10 md:pb-20 px-4">
@@ -200,11 +211,49 @@
   </div>
 
   <div class="grid gap-8 md:gap-12">
-    {#each productCategories as category}
+    {#each productCategories as category, index}
       <div
-        class="shadow-[0px_3px_17px_-2px_rgba(0,_0,_0,_0.5)] rounded-2xl p-8 transition-shadow duration-300"
+        class="relative overflow-hidden shadow-[0px_3px_17px_-2px_rgba(0,_0,_0,_0.5)] rounded-2xl p-8 transition-shadow duration-300"
       >
-        <div class="flex items-center mb-6">
+        <div class="svg-wrapper">
+          <svg
+            width="650"
+            height="650"
+            viewBox="0 0 650 650"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="branch-bg-gradientcolor"
+          >
+            <defs>
+              <filter
+                id="blurFilterOne"
+                x="-20"
+                y="-20"
+                width="200"
+                height="200"
+              >
+                <feGaussianBlur in="SourceGraphic" stdDeviation="50" />
+              </filter>
+            </defs>
+            <circle
+              cx="300"
+              cy="350"
+              r="120"
+              fill={getColor(index)}
+              filter="url(#blurFilterOne)"
+            />
+
+            <circle
+              cx="280"
+              cy="235"
+              r="120"
+              fill={getColor(index)}
+              filter="url(#blurFilterOne)"
+            />
+          </svg>
+        </div>
+
+        <div class="relative z-99 flex items-center mb-6">
           <div
             class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mr-4"
           >
@@ -228,7 +277,9 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div
+          class="relative z-99 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
+        >
           {#each category.products as product}
             <div
               class="flex items-center justify-center brand-card bg-gray-50 hover:shadow-[0px_3px_17px_-2px_rgba(0,_0,_0,_0.25)] rounded-lg p-4 transition-all duration-200 group"
@@ -247,3 +298,21 @@
     {/each}
   </div>
 </section>
+
+<style>
+  .svg-wrapper {
+    position: absolute;
+    bottom: -275px;
+    left: -10%;
+    opacity: 0.5;
+    scale: 1.175;
+    animation: rotate_move 35s infinite;
+    transition: opacity 100ms ease-in-out;
+  }
+
+  @keyframes rotate_move {
+    50% {
+      transform: rotate(180deg);
+    }
+  }
+</style>

@@ -60,6 +60,11 @@
           <a class="item" href={nav.href}> {nav.label} </a>
         </li>
       {/each}
+      <li>
+        <a class="item bg-[#0a0e30] call-now" href="tel:0288125965"
+          >Call Us Now</a
+        >
+      </li>
     </ul>
   </nav>
 
@@ -177,8 +182,14 @@
     line-height: 2;
 
     &:hover {
-      background-color: #e2ded6;
+      background-color: #0a0e30;
+      color: #fff;
     }
+  }
+
+  .call-now {
+    cursor: pointer;
+    color: #fff;
   }
 
   .mobile-nav {

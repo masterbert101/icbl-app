@@ -13,12 +13,10 @@
       class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400"
     >
       IC Bestlink Telecom Corporation <br />
-      Your Best link to the future of service technology <br /> UG 7 Cityland 8
-      Condominium No. 98 Sen Gil Puyat Avenue Makati City
-      <br />
+      Your Best link to the future of service technology
     </p>
 
-    <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+    <ul class="my-8 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
       <li>
         <a
           class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
@@ -55,6 +53,16 @@
         </a>
       </li>
     </ul>
+
+    <p
+      class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-300 dark:text-gray-300"
+    >
+      UG 7 Cityland 8 Condominium No. 98 Sen Gil Puyat Avenue Makati City
+      <br />
+      (02) 8812 – 5965 <br /> 0917-899-9031
+      <br />
+      cs@icbestlink.com
+    </p>
 
     <ul class="mt-12 flex justify-center gap-6 md:gap-8">
       <li>
@@ -170,5 +178,10 @@
         </a>
       </li>
     </ul>
+  </div>
+  <div>
+    <p class="py-4 text-center text-base text-gray-500 dark:text-gray-400">
+      &copy; IC Bestlink Telecom Corporation. All rights reserved. {new Date().getFullYear()}
+    </p>
   </div>
 </footer>
