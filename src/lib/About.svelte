@@ -71,10 +71,10 @@ deployment of Real-time communications today and beyond.`,
   <div
     class="my-10 lg:my-20 shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)] py-8 md:py-12 px-12 md:px-20 rounded-3xl mx-auto max-w-5xl"
   >
-    <h2 class="text-2xl md:text-4xl font-bold mb-8 text-[#0a0e30]">
+    <h2 class="text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-[#0a0e30]">
       Our Mission
     </h2>
-    <ul class="list-disc list-inside space-y-8">
+    <ul class="list-disc list-inside space-y-6 md:space-y-8">
       {#each missions as mission}
         <li class="text-[#0a0e30] text:lg md:text-xl">{mission}</li>
       {/each}

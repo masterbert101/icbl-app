@@ -86,13 +86,15 @@
 
 <section class="px-4 pb-10 md:pb-20 mx-auto lg:max-w-screen-2xl" id="services">
   <header class="py-4 text-center">
-    <h2 class="text-primary text-4xl font-bold">Services We Offer</h2>
+    <h2 class="text-primary text-4xl font-bold">OUR SERVICES</h2>
 
-    <p class="text-primary text-sm md:text-lg my-4">
-      From reliable network solutions to scalable ICT support, our expert
-      services are designed to help businesses stay connected, competitive, and
-      future-ready. Whether you're upgrading infrastructure or streamlining
-      communication, we deliver the service you can trust.
+    <p class="text-primary text-gray-600 text-base md:text-lg my-4">
+      Comprehensive Telecommunications Solutions: A Complete Suite of Services
+      for Optimal Connectivity. Our professional services encompass a broad
+      spectrum of offerings, including wiring, PABX system installation,
+      structured cabling, CCTV installations, and maintenance agreements. We are
+      committed to delivering tailored solutions to meet your organization's
+      unique telecommunications needs.
     </p>
   </header>
 
@@ -369,6 +371,11 @@
     scale: 1.275;
     animation: rotate_move 35s infinite;
     transition: opacity 100ms ease-in-out;
+
+    @media only screen and (max-width: 640px) {
+      bottom: -500px;
+      right: -70%;
+    }
   }
 
   @keyframes rotate_move {
@@ -385,6 +392,11 @@
     scale: 1.275;
     animation: rotate_move 35s infinite;
     transition: opacity 100ms ease-in-out;
+
+    @media only screen and (max-width: 640px) {
+      top: 400px;
+      right: -60%;
+    }
   }
 
   @keyframes rotate_move {

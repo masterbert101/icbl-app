@@ -18,8 +18,8 @@
       case "/product":
         return {
           title: "Products We offer",
-          description:
-            "Discover our innovative products designed to connect the world.",
+          description: `Discover our selection of ICT and telecom products that make life easier, faster, and more connected — whether you're building a smarter office, boosting your network, or staying in touch
+with the world.`,
         };
       case "/about":
         return {

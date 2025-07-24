@@ -2,6 +2,7 @@
   let productCategories = [
     {
       label: "Battery",
+      icon: "battery.svg",
       products: [
         { src: "Maxell.png", alt: "Maxell" },
         { src: "Yuasa.png", alt: "Yuasa" },
@@ -9,6 +10,7 @@
     },
     {
       label: "Cabling",
+      icon: "cabling.svg",
       products: [
         { src: "Belden.png", alt: "Belden" },
         { src: "Commscope.png", alt: "Commscope" },
@@ -20,6 +22,7 @@
     },
     {
       label: "CCTV",
+      icon: "cctv.svg",
       products: [
         { src: "Avigilon.png", alt: "Avigilon" },
         { src: "Axis Communication.png", alt: "Axis Communication" },
@@ -32,6 +35,7 @@
     },
     {
       label: "Door Security",
+      icon: "door.svg",
       products: [
         { src: "Bosch.png", alt: "Bosch" },
         { src: "Dahua.png", alt: "Dahua" },
@@ -41,10 +45,12 @@
     },
     {
       label: "Emergency Hotline",
+      icon: "hotline.svg",
       products: [{ src: "911.png", alt: "911" }],
     },
     {
       label: "Fire Alarm and Detection System",
+      icon: "fire.svg",
       products: [
         { src: "Bosch.png", alt: "Bosch" },
         { src: "Dahua.png", alt: "Dahua" },
@@ -56,6 +62,7 @@
     },
     {
       label: "Network Components",
+      icon: "network.svg",
       products: [
         { src: "/Aruba.png", alt: "Aruba" },
         { src: "/Cambium Networks.png", alt: "Cambium Networks" },
@@ -75,6 +82,7 @@
     },
     {
       label: "PABX Components",
+      icon: "pabx.svg",
       products: [
         { src: "/Alcatel.png", alt: "Alcatel" },
         { src: "/Avaya.png", alt: "Avaya" },
@@ -88,6 +96,7 @@
     },
     {
       label: "Paging-Audio-Visual System",
+      icon: "audiovisual.svg",
       products: [
         { src: "/Bosch.png", alt: "Bosch" },
         { src: "/Hochiki.png", alt: "Hochiki" },
@@ -101,6 +110,8 @@
     },
     {
       label: "PC laptop and Server",
+      icon: "laptop.svg",
+
       products: [
         { src: "/Acer.png", alt: "Acer" },
         { src: "/Altos.png", alt: "Altos" },
@@ -114,6 +125,8 @@
     },
     {
       label: "Printer",
+      icon: "printer.svg",
+
       products: [
         { src: "/Brother.png", alt: "Brother" },
         { src: "/Canon.png", alt: "Canon" },
@@ -124,6 +137,8 @@
     },
     {
       label: "Racks and Cabinets",
+      icon: "racks.svg",
+
       products: [
         { src: "/Cable Tray.jpg", alt: "Cable Tray" },
         { src: "/Data Cabinet Wall Mount.png", alt: "Data Cabinet Wall Mount" },
@@ -143,6 +158,8 @@
     },
     {
       label: "Softwares",
+      icon: "software.svg",
+
       products: [
         { src: "/Acserve.png", alt: "Acserve" },
         { src: "/Citrix.png", alt: "Citrix" },
@@ -159,6 +176,8 @@
     },
     {
       label: "Storage",
+      icon: "storage.svg",
+
       products: [
         { src: "/Buffalo.png", alt: "Buffalo" },
         { src: "/Infortrend.png", alt: "Infortrend" },
@@ -172,6 +191,8 @@
     },
     {
       label: "UPS",
+      icon: "ups.svg",
+
       products: [
         { src: "/Accupower.png", alt: "Accupower" },
         { src: "/APC.png", alt: "APC" },
@@ -201,12 +222,15 @@
 
 <section class="mx-auto lg:max-w-screen-2xl pb-10 md:pb-20 px-4">
   <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold text-gray-900 mb-4">
-      Our Product Categories
-    </h2>
-    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-      Discover the best tech products from top brands across different
-      categories
+    <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Products</h2>
+    <p class="text-base md:text-lg text-gray-600 lg:px-10">
+      We Offer Comprehensive Solutions from Leading Brands. Our product
+      portfolio spans multiple categories, both hardware and software. These
+      includes PABX components, PC/laptops & servers, storage solutions,
+      printers, projectors, batteries, network components, paging & audio-visual
+      systems, FDAS, emergency hotline systems, cabling, CCTV, door security,
+      UPS, and racks & cabinets. We are also capable of supplying and delivering
+      these to your places.
     </p>
   </div>
 
@@ -255,21 +279,9 @@
 
         <div class="relative z-99 flex items-center mb-6">
           <div
-            class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mr-4"
+            class="w-16 h-16 bg-[#0a0e30] rounded-xl flex items-center justify-center mr-4"
           >
-            <svg
-              class="w-8 h-8 text-blue-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              ></path>
-            </svg>
+            <img src={category.icon} alt={category.label} />
           </div>
           <div>
             <h3 class="text-2xl font-bold text-gray-900">{category.label}</h3>
