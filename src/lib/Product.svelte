@@ -328,7 +328,7 @@ processes, support customer service, and help monitor performance.`,
   <div class="grid gap-8 md:gap-12">
     {#each productCategories as { category, icon, excerpt, productsSub }, index}
       <div
-        class="relative grid md:grid-cols-[1fr_2fr] gap-2 lg:gap-4 overflow-hidden shadow-[0px_3px_17px_-2px_rgba(0,_0,_0,_0.5)] rounded-2xl p-8 transition-shadow duration-300"
+        class="relative grid md:grid-cols-[1fr_2fr] gap-2 lg:gap-4 overflow-hidden shadow-[0px_3px_17px_-2px_rgba(0,_0,_0,_0.5)] rounded-2xl p-6 md:p-8 transition-shadow duration-300"
       >
         <div class="svg-wrapper">
           <svg
@@ -388,7 +388,7 @@ processes, support customer service, and help monitor performance.`,
           {#each productsSub as { label, products }}
             <div class="bg-gray-50/65 py-2 px-4 rounded-lg shadow-md">
               <h3 class="text-xl font-bold text-[#0a0e30] mb-4">{label}</h3>
-              <div class="grid grid-cols-3 gap-4 mb-4">
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
                 {#each products as product}
                   <div
                     class="min-w-[109px] min-h-[109px] flex items-center justify-center brand-card bg-white/50 shadow-[0px_3px_17px_-2px_rgba(0,_0,_0,_0.25)] rounded-lg p-4 transition-all duration-200 group"
