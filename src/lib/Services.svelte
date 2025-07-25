@@ -2,31 +2,31 @@
   import { onMount, onDestroy } from "svelte";
 
   let professionalServices = [
-    "In-house Voice or Data Wiring",
+    "In-house Voice and Data Wiring",
     "Structured Cabling",
     "System Installation and Commissioning",
-    "CCTV Installations",
-    "System Relocations",
+    "CCTV Installation",
+    "System Relocation",
     "Repair and Maintenance for Voice and Data",
     "Data Center Solutions",
     "Software Upgrades and Licensing Solutions",
-    "Consultancy",
+    "IT Consultancy",
     "Solution Integration",
     "Application Programming",
-    "System Traffic Evaluation & Recommendation",
+    "System Traffic Evaluation and Recommendations",
     "Training Programs",
-    "Free Estimate/Project Survey",
+    "Free Estimates and Project Surveys",
   ];
 
   let managedServices = [
-    "On Call Services",
-    "Call Billing Report",
-    "PABX Leasing and Rental Agreement",
+    "On-Call Support Services",
+    "Call Billing Reports",
+    "PABX Leasing and Rental Agreements",
     "Basic Maintenance Agreement",
     "Quarterly Maintenance Agreement",
     "Semi-Annual Maintenance Agreement",
     "Annual Maintenance Agreement",
-    "On-Call Services/24 Hour Support",
+    "24/7 On-Call Support Services",
   ];
 
   let movingServices = [
@@ -84,17 +84,16 @@
   });
 </script>
 
-<section class="px-4 pb-10 md:pb-20 mx-auto lg:max-w-screen-2xl" id="services">
+<section class="px-4 pb-10 md:pb-20 mx-auto lg:max-w-7xl" id="services">
   <header class="py-4 text-center">
-    <h2 class="text-primary text-4xl font-bold">OUR SERVICES</h2>
+    <h2 class="text-4xl font-bold text-[#0a0e30] mb-4">OUR SERVICES</h2>
 
     <p class="text-primary text-gray-600 text-base md:text-lg my-4">
-      Comprehensive Telecommunications Solutions: A Complete Suite of Services
-      for Optimal Connectivity. Our professional services encompass a broad
-      spectrum of offerings, including wiring, PABX system installation,
-      structured cabling, CCTV installations, and maintenance agreements. We are
-      committed to delivering tailored solutions to meet your organization's
-      unique telecommunications needs.
+      From specialized system services to comprehensive end-to-end
+      solutions—including networking, security, telephony, structured cabling,
+      and integrated communications—we empower your business with speed,
+      efficiency, and modern connectivity. Rely on our trusted, high-quality
+      services to keep your operations running smoothly and seamlessly.
     </p>
   </header>
 

@@ -59,9 +59,10 @@
         Get In <span class="text-[#00a1c2]">Touch</span>
       </h3>
       <p class="mt-4 leading-7 text-gray-200">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s.
+        If there’s anything we can assist you with, whether it’s products or
+        services, don’t hesitate to reach out! We’re here to connect you with
+        the best path to the future. Stay connected using the details below.
+        Thank you!
       </p>
 
       <div class="grid grid-cols-[max-content_1fr] items-center mt-5 gap-3">

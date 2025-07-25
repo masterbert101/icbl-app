@@ -35,8 +35,10 @@ with the world.`,
       default:
         return {
           title: "Your BEST link to the Future of Communications!",
-          description: `Delivering cutting-edge ICT solutions, telecommunications services, 
-                        and innovative products that empower a better, connected life — driving technology forward.`,
+          description: `Delivering innovative, cutting-edge information
+technology and unified communication solutions
+that empower a more connected and better life—
+driving technology forward with purpose.`,
         };
     }
   }
@@ -47,7 +49,7 @@ with the world.`,
 <section
   class="relative bg-[#0a0e30] transition-all duration-1000 ease-in-out {route !==
   '/'
-    ? ' mt-4 md:mt-8 mx-4 md:mx-16 mb-8 md:mb-10 rounded-3xl shadow-lg overflow-hidden'
+    ? ' mt-4 lg:mt-8 mx-4  xl:mx-16 mb-8 md:mb-10 rounded-3xl shadow-lg overflow-hidden'
     : ''}"
 >
   <!-- Hero -->

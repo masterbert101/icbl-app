@@ -25,8 +25,8 @@ deployment of Real-time communications today and beyond.`,
   ];
 </script>
 
-<section class="px-4 pb-10 md:pb-20 mx-auto lg:max-w-screen-2xl">
-  <div class="grid md:grid-cols-2 gap-4 md:gap-0 py-4 items-center">
+<section class="px-4 pb-10 md:pb-20 mx-auto lg:max-w-7xl">
+  <div class="grid md:grid-cols-2 gap-4 md:gap-8 py-4 items-center">
     <div>
       <h2 class="text-2xl md:text-4xl font-bold mb-4">Who We Are?</h2>
       <p class="text-base md:text-xl text-gray-500 w-full lg:w-[675px]">
@@ -91,7 +91,7 @@ deployment of Real-time communications today and beyond.`,
       {#each awards as award}
         <li>
           <div
-            class="w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] bg-white rounded-full overflow-hidden shadow-lg flex justify-center items-center"
+            class="w-[150px] h-[150px] lg:w-[350px] lg:h-[350px] bg-white rounded-full overflow-hidden shadow-lg flex justify-center items-center"
           >
             <img src={award.src} alt={award.alt} width="250" height="250" />
           </div>
@@ -99,4 +99,21 @@ deployment of Real-time communications today and beyond.`,
       {/each}
     </ul>
   </div>
+</section>
+
+<section class="px-4 pb-10 md:pb-20 mx-auto lg:max-w-7xl">
+  <h3 class="text-2xl md:text-3xl font-bold mb-4 text-[#0a0e30]/95">
+    Our Office Location
+  </h3>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.7234603467076!2d121.00673141531846!3d14.558228189827076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c97317e43633%3A0x8d9c5d655eabc5d1!2sCityland%208!5e0!3m2!1sen!2sph!4v1696409023705!5m2!1sen!2sph"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="google maps location"
+  >
+  </iframe>
 </section>

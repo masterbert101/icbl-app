@@ -142,7 +142,7 @@
   .desktop-nav {
     display: none;
 
-    @media only screen and (min-width: 640px) {
+    @media only screen and (min-width: 992px) {
       width: 100%;
       display: flex;
       flex: 1;
@@ -193,13 +193,13 @@
   }
 
   .mobile-nav {
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       display: none;
     }
 
-    @media (min-width: 922px) {
+    @media (min-width: 992px) {
       .nav-menu {
-        width: 970px;
+        width: 900px;
       }
     }
 
@@ -223,6 +223,10 @@
       padding: 5px;
       border-radius: 5px;
       background: transparent;
+
+      @media (min-width: 768px) {
+        top: 45px;
+      }
     }
 
     .moveBurger {
