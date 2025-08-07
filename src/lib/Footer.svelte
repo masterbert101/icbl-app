@@ -119,7 +119,7 @@
 
       <li>
         <a
-          href="https://www.facebook.com/profile.php?id=61575275860907"
+          href="https://m.yelp.com/biz/ic-best-link-telecom-corporation-makati-2?osq=IC-Best+Link+Telecom+Corporation"
           rel="noreferrer"
           target="_blank"
           class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"

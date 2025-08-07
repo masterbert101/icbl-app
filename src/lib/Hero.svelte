@@ -66,7 +66,7 @@ driving technology forward with purpose.`,
         <h1
           class="text-white text-4xl font-bold {route !== '/'
             ? 'lg:text-7xl'
-            : 'lg:text-8xl'}"
+            : 'lg:text-7xl'}"
         >
           {heroContent.title}
         </h1>

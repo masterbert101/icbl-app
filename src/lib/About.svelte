@@ -26,10 +26,34 @@ deployment of Real-time communications today and beyond.`,
 </script>
 
 <section class="px-4 pb-10 md:pb-20 mx-auto lg:max-w-7xl">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold text-[#0a0e30] mb-4">Who We Are?</h2>
+    <p class="text-base md:text-lg text-gray-600 lg:px-10">
+      IC Bestlink Telecom Corporation is a Filipino owned corporation providing
+      state of the art and innovative Information & Communication Technology
+      (ICT) Solutions and services for the enterprise market. IC Bestlink was
+      established February 3, 2003. Powered by a workforce of 22 years’
+      experience in deploying different kinds of Communications Solutions for
+      various local and international partners, IC Bestlink is dedicated and is
+      focused in delivering ICT designs, consultancy, commissioning, and managed
+      services in the line of Legacy’s PBX’s, IP Converged Platforms, Voice over
+      IP, Messaging, e-CRM applications, Computers and Data/Voice networking in
+      the utmost customer-oriented methodologies.
+    </p>
+  </div>
+
   <div class="grid md:grid-cols-2 gap-4 md:gap-8 py-4 items-center">
     <div>
-      <h2 class="text-2xl md:text-4xl font-bold mb-4">Who We Are?</h2>
-      <p class="text-base md:text-xl text-gray-500 w-full lg:w-[675px]">
+      <h2 class="text-2xl md:text-4xl font-bold mb-4">Our Mission</h2>
+
+      <ul class="list-disc list-inside space-y-6 md:space-y-4">
+        {#each missions as mission}
+          <li class="text-base md:text-xl text-gray-500 w-full lg:w-[675px]">
+            {mission}
+          </li>
+        {/each}
+      </ul>
+      <!-- <p class="text-base md:text-xl text-gray-500 w-full lg:w-[675px]">
         IC Bestlink Telecom Corporation is a Filipino owned corporation
         providing state of the art and innovative Information & Communication
         Technology (ICT) Solutions and services for the enterprise market. IC
@@ -41,12 +65,8 @@ deployment of Real-time communications today and beyond.`,
         Converged Platforms, Voice over IP, Messaging, e-CRM applications,
         Computers and Data/Voice networking in the utmost customer-oriented
         methodologies.
-      </p>
+      </p> -->
     </div>
-    <img src="aboutus1.png" alt="Who we are" height="600" width="600" />
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-4 md:gap-0 py-4 items-center">
     <img
       class="order-2 md:order-1"
       src="aboutus2.png"
@@ -54,6 +74,10 @@ deployment of Real-time communications today and beyond.`,
       height="600"
       width="600"
     />
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4 md:gap-0 py-4 items-center">
+    <img src="aboutus1.png" alt="Who we are" height="600" width="600" />
     <div class="order-1 md:order-2">
       <h2 class="text-2xl md:text-4xl font-bold mb-4">Our Vision</h2>
       <p class="text-base md:text-xl text-gray-500 w-full lg:w-[675px]">
@@ -68,7 +92,7 @@ deployment of Real-time communications today and beyond.`,
     </div>
   </div>
 
-  <div
+  <!-- <div
     class="my-10 lg:my-20 shadow-[0px_-1px_17px_-2px_rgba(0,_0,_0,_0.45)] py-8 md:py-12 px-12 md:px-20 rounded-3xl mx-auto max-w-5xl"
   >
     <h2 class="text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-[#0a0e30]">
@@ -79,9 +103,9 @@ deployment of Real-time communications today and beyond.`,
         <li class="text-[#0a0e30] text:lg md:text-xl">{mission}</li>
       {/each}
     </ul>
-  </div>
+  </div> -->
 
-  <div class="py-10 lg:py-20 bg-[#0a0e30] rounded-3xl">
+  <div class="py-10 lg:py-20 bg-[#0a0e30] mt-1 md:mt-4 lg:mt-8 rounded-3xl">
     <h2 class="text-3xl md:text-5xl font-bold text-center text-white">
       Awards and Recognition
     </h2>
@@ -91,7 +115,7 @@ deployment of Real-time communications today and beyond.`,
       {#each awards as award}
         <li>
           <div
-            class="w-[150px] h-[150px] lg:w-[350px] lg:h-[350px] bg-white rounded-full overflow-hidden shadow-lg flex justify-center items-center"
+            class="w-[150px] h-[150px] lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden flex justify-center items-center"
           >
             <img src={award.src} alt={award.alt} width="250" height="250" />
           </div>

@@ -3,49 +3,39 @@
   import Button from "./Button.svelte";
 
   let clientsLogo = [
-    { src: "/Acer.png", alt: "Acer" },
-    { src: "/Asus.png", alt: "Asus" },
-    { src: "/911.png", alt: "911" },
-    { src: "/Accupower.png", alt: "Accupower" },
-    { src: "/Acserve.png", alt: "Acserve" },
-    { src: "/Alcatel.png", alt: "Alcatel" },
-    { src: "/Aoc.png", alt: "Aoc" },
     { src: "/APC.png", alt: "APC" },
-    { src: "/Bosch.png", alt: "Bosch" },
-    { src: "/Canon.png", alt: "Canon" },
-    { src: "/Cisco.png", alt: "Cisco" },
-    { src: "/Citrix.png", alt: "Citrix" },
-    { src: "/D Link.png", alt: "D Link" },
-    { src: "/Dahua.png", alt: "Dahua" },
-    { src: "/Dell.png", alt: "Dell" },
     { src: "/Delta.png", alt: "Delta" },
-    { src: "/Epson.png", alt: "Epson" },
-    { src: "/Fortinet.png", alt: "Fortinet" },
-    { src: "/Fujitsu.png", alt: "Fujitsu" },
-    { src: "/Hikvision.png", alt: "Hikvision" },
-    { src: "/Logitech.png", alt: "Logitech" },
-    { src: "/Microsoft.png", alt: "Microsoft" },
-    { src: "/Mitel.png", alt: "Mitel" },
-    { src: "/Nec.png", alt: "Nec" },
-    { src: "/NetApp.png", alt: "NetApp" },
-    { src: "/Nuance.png", alt: "Nuance" },
-    { src: "/Panasonic.png", alt: "Panasonic" },
-    { src: "/Panduit.png", alt: "Panduit" },
-    { src: "/Quantum.png", alt: "Quantum" },
-    { src: "/Samsung.png", alt: "Samsung" },
-    { src: "/Sandisk.png", alt: "Sandisk" },
+    { src: "/Socomec.png", alt: "Socomec" },
     { src: "/Seagate.png", alt: "Seagate" },
-    { src: "/Sketchup.png", alt: "Sketchup" },
-    { src: "/Sonic Wall.png", alt: "Sonic Wall" },
-    { src: "/Sophos.png", alt: "Sophos" },
-    { src: "/Televic.png", alt: "Televic" },
-    { src: "/TOA.png", alt: "TOA" },
-    { src: "/Toshiba.png", alt: "Toshiba" },
+    { src: "/Acer.png", alt: "Acer" },
+    { src: "/Dell.png", alt: "Dell" },
+    { src: "/Asus.png", alt: "Asus" },
+    { src: "/Cisco.png", alt: "Cisco" },
+    { src: "/Level One.png", alt: "Level One" },
     { src: "/TP Link.png", alt: "TP Link" },
     { src: "/Ubiquiti.png", alt: "Ubiquiti" },
+    { src: "/Fortinet.png", alt: "Fortinet" },
+    { src: "/Commscope.png", alt: "Commscope" },
+    { src: "/911.png", alt: "911" },
+    { src: "/Panduit.png", alt: "Panduit" },
+    { src: "/Belden.png", alt: "Belden" },
+    { src: "/Avaya.png", alt: "Avaya" },
     { src: "/Unify.png", alt: "Unify" },
-    { src: "/View Sonic.png", alt: "View Sonic" },
-    { src: "/Yeastar.png", alt: "Yeastar" },
+    { src: "/Mitel.png", alt: "Mitel" },
+    { src: "/Grandstream.png", alt: "Grandstream" },
+    { src: "/Hikvision.png", alt: "Hikvision" },
+    { src: "/Honeywell.png", alt: "Honeywell" },
+    { src: "/TOA.png", alt: "TOA" },
+    { src: "/Bosch.png", alt: "Bosch" },
+    { src: "/Canon.png", alt: "Canon" },
+    { src: "/Dahua.png", alt: "Dahua" },
+    { src: "/Epson.png", alt: "Epson" },
+    { src: "/Brother.png", alt: "Brother" },
+    { src: "/Microsoft.png", alt: "Microsoft" },
+    { src: "/Kiddie.png", alt: "Kiddie" },
+    { src: "/Teltrac.webp", alt: "Teltrac" },
+    { src: "/Sophos.png", alt: "Sophos" },
+    { src: "/NComputing.png", alt: "Ncomputing" },
   ];
 
   let icblClient = [
@@ -239,7 +229,7 @@
       </h3>
       <p class="text-base md:text-lg mt-2 font-medium text-gray-600">
         Governed by our proven delivery methodology and deep local expertise, we
-        facilitate reliable, scalable and customer centric telecommunications
+        facilitate reliable, scalable and customer—centric telecommunications
         solutions across both public and corporate sectors.
       </p>
     </div>
@@ -276,10 +266,11 @@
         Our Services
       </h2>
       <p class="text-base font-medium my-4 text-gray-600">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        Our professional services cover a wide range of solutions, including
+        telecommunications setup, network, cabling, security, systems
+        installation, and ongoing maintenance. We are dedicated to providing
+        customized services designed to meet the specific needs of each
+        organization.
       </p>
       <a
         href="/services"
@@ -296,10 +287,13 @@
     <div class="text-left">
       <h2 class="text-2xl md:text-4xl font-bold text-[#0a0e30]">Our Product</h2>
       <p class="text-base font-medium my-4 text-gray-600">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        We provide a broad selection of cutting-edge technology solutions from
+        trusted industry leaders, covering everything from communication systems
+        and computing devices to networking, security, and audio-visual
+        equipment. Whether you need hardware, software, or infrastructure
+        components, we ensure seamless supply and delivery tailored to your
+        requirements—helping you stay connected and ahead in today’s fastpaced
+        world.
       </p>
       <a
         href="/product"
@@ -324,7 +318,7 @@
   <div class="text-left w-full">
     <div class="clients-text-wrapper">
       <h2 class="text-2xl md:text-3xl font-bold my-2 text-[#0a0e30]">
-        NEWS and UPDATES
+        NEWS & UPDATES
       </h2>
       <p class="text-lg mt-2 font-medium text-gray-600">
         Stay tuned for the up-to-date ICBL updates, covering insights, products,

@@ -40,7 +40,7 @@
 
 <svelte:window bind:scrollY />
 
-<div class="header transition-all duration-350" class:addBG={scrollY >= 500}>
+<div class="header transition-all duration-350" class:addBG={scrollY >= 275}>
   <nav class="desktop-nav">
     <ul class="primary">
       <li class="mr-10">
@@ -61,8 +61,9 @@
         </li>
       {/each}
       <li>
-        <a class="item bg-[#0a0e30] call-now" href="tel:0288125965"
-          >Call Us Now</a
+        <a
+          class="item bg-[#0a0e30] call-now"
+          href="https://icbestlink.com/icbldialer3.html">Call Us Now</a
         >
       </li>
     </ul>
