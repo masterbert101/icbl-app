@@ -124,7 +124,7 @@ deployment of Real-time communications today and beyond.`,
       Awards and Recognition
     </h2>
     <ul
-      class="grid grid-cols-3 md:grid-cols-4 gap-y-10 md:gap-y-20 justify-items-center items-center pt-10 lg:pt-20 rounded-3xl shadow-xl"
+      class="grid grid-cols-3 md:grid-cols-4 gap-y-10 md:gap-y-20 justify-items-center items-center py-8 lg:py-20 rounded-3xl shadow-xl"
       style="background-image: url('/awardsbg.png'); background-size: contain;"
     >
       {#each awards as award}
