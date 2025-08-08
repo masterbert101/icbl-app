@@ -43,12 +43,14 @@ deployment of Real-time communications today and beyond.`,
   </div>
 
   <div class="grid md:grid-cols-2 gap-4 md:gap-8 py-4 items-center">
-    <div>
-      <h2 class="text-2xl md:text-4xl font-bold mb-4">Our Mission</h2>
+    <div class="text-wrap">
+      <h2 class="text-2xl md:text-4xl font-bold mb-4 text-[#0a0e30]">
+        Our Mission
+      </h2>
 
       <ul class="list-disc list-inside space-y-6 md:space-y-4">
         {#each missions as mission}
-          <li class="text-base md:text-xl text-gray-500 w-full lg:w-[675px]">
+          <li class="text-base md:text-xl text-gray-6 00 w-full lg:w-[609px]">
             {mission}
           </li>
         {/each}
@@ -69,18 +71,28 @@ deployment of Real-time communications today and beyond.`,
     </div>
     <img
       class="order-2 md:order-1"
-      src="aboutus2.png"
-      alt="vision"
+      src="mission-inline.png"
+      alt="mission"
       height="600"
       width="600"
     />
   </div>
 
-  <div class="grid md:grid-cols-2 gap-4 md:gap-0 py-4 items-center">
-    <img src="aboutus1.png" alt="Who we are" height="600" width="600" />
+  <div
+    class="grid md:grid-cols-2 gap-4 md:gap-4 pt-4 md:pt-16 py-4 items-center"
+  >
+    <img
+      class="order-2 md:order-1"
+      src="vision-inline.png"
+      alt="Vision"
+      height="600"
+      width="600"
+    />
     <div class="order-1 md:order-2">
-      <h2 class="text-2xl md:text-4xl font-bold mb-4">Our Vision</h2>
-      <p class="text-base md:text-xl text-gray-500 w-full lg:w-[675px]">
+      <h2 class="text-2xl md:text-4xl font-bold mb-4 text-[#0a0e30]">
+        Our Vision
+      </h2>
+      <p class="text-base md:text-xl text-gray-600 w-full lg:w-[675px]">
         Our Vision is to be the leader in the Information & Communication,
         Technology Solutions deployment using different kinds of platforms
         Solutions and Professional Services covering Inside and Outside Metro
@@ -105,12 +117,15 @@ deployment of Real-time communications today and beyond.`,
     </ul>
   </div> -->
 
-  <div class="py-10 lg:py-20 bg-[#0a0e30] mt-1 md:mt-4 lg:mt-8 rounded-3xl">
-    <h2 class="text-3xl md:text-5xl font-bold text-center text-white">
+  <div class="py-10 lg:py-20 mt-1 md:mt-4">
+    <h2
+      class="text-3xl md:text-5xl font-bold text-center text-[#0a0e30] md-1 md:mb-4"
+    >
       Awards and Recognition
     </h2>
     <ul
-      class="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-20 justify-items-center items-center pt-10 lg:pt-20"
+      class="grid grid-cols-3 md:grid-cols-4 gap-y-10 md:gap-y-20 justify-items-center items-center pt-10 lg:pt-20 rounded-3xl shadow-xl"
+      style="background-image: url('/awardsbg.png'); background-size: contain;"
     >
       {#each awards as award}
         <li>

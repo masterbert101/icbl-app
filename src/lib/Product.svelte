@@ -145,6 +145,7 @@ communication.`,
           icon: "pabx.svg",
           products: [
             { src: "/Alcatel.png", alt: "Alcatel" },
+            { src: "/Audiocodes.png", alt: "Audiocodes" },
             { src: "/Avaya.png", alt: "Avaya" },
             { src: "/Fanvil.png", alt: "Fanvil" },
             { src: "/Grandstream.png", alt: "Grandstream" },
