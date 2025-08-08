@@ -110,12 +110,12 @@ deployment of Real-time communications today and beyond.`,
       Awards and Recognition
     </h2>
     <ul
-      class="grid grid-cols-2 md:grid-cols-3 gap-y-10 justify-items-center items-center pt-10 lg:pt-20"
+      class="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-20 justify-items-center items-center pt-10 lg:pt-20"
     >
       {#each awards as award}
         <li>
           <div
-            class="w-[150px] h-[150px] lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden flex justify-center items-center"
+            class="w-[125px] h-[125px] lg:w-[300px] lg:h-[300px] rounded-full overflow-hidden flex justify-center items-center"
           >
             <img src={award.src} alt={award.alt} width="250" height="250" />
           </div>

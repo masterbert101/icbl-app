@@ -145,10 +145,21 @@
   ];
 
   let news = [
-    { src: "news1.webp", title: "News 1", excerpt: "Lorem ipsum lorem ipsum" },
-    // { src: "news1.webp", title: "News 2", excerpt: "Lorem ipsum lorem ipsum" },
-    // { src: "news3.webp", title: "News 3", excerpt: "Lorem ipsum lorem ipsum" },
-    { src: "news3.webp", title: "News 2", excerpt: "Lorem ipsum lorem ipsum" },
+    {
+      src: "hiring-poster-icbl1.png",
+      title: "Delivering More Than Messages — We Deliver Trust.",
+      excerpt: "",
+    },
+    {
+      src: "hiring-poster-icbl2.png",
+      title: "Keep the World Talking — One Connection at a Time.",
+      excerpt: "",
+    },
+    {
+      src: "hiring-poster-icbl3.png",
+      title: "Wire the World. Build the Backbone of Connectivity.",
+      excerpt: "",
+    },
   ];
 
   let container = $state();
@@ -188,6 +199,8 @@
       if (container) container.style.transform = "";
     }
   });
+
+  let showModal = $state(false);
 </script>
 
 <!-- Moving banner -->
@@ -223,9 +236,10 @@
     <div class="">
       <h2 class="text-base font-bold my-2">ICBL CLIENTS</h2>
       <h3 class="text-xl md:text-2xl font-bold text-[#0a0e30]">
-        Our unwavering commitment to excellence and deep knowledge of Philippine
-        business needs makes IC-Best Link the clear choice for organizations
-        looking to unlock seamless, innovative ICT deployment.
+        Our unwavering commitment to excellence and deep knowledge of the unique
+        needs of Philippine businesses positions IC-Best Link the top choice for
+        organizations seeking to unlock seamless and innovative ICT deployment
+        solutions.
       </h3>
       <p class="text-base md:text-lg mt-2 font-medium text-gray-600">
         Governed by our proven delivery methodology and deep local expertise, we
@@ -266,11 +280,11 @@
         Our Services
       </h2>
       <p class="text-base font-medium my-4 text-gray-600">
-        Our professional services cover a wide range of solutions, including
-        telecommunications setup, network, cabling, security, systems
-        installation, and ongoing maintenance. We are dedicated to providing
-        customized services designed to meet the specific needs of each
-        organization.
+        IC-BEST LINK delivers a full-featured suite of telecommunications,
+        network infrastructure, security, and system services—completely
+        tailored and backed by professional standards, testing, and ongoing
+        support, ensuring that client organizations enjoy stable, secure,
+        scalable operations.
       </p>
       <a
         href="/services"
@@ -287,13 +301,12 @@
     <div class="text-left">
       <h2 class="text-2xl md:text-4xl font-bold text-[#0a0e30]">Our Product</h2>
       <p class="text-base font-medium my-4 text-gray-600">
-        We provide a broad selection of cutting-edge technology solutions from
-        trusted industry leaders, covering everything from communication systems
-        and computing devices to networking, security, and audio-visual
-        equipment. Whether you need hardware, software, or infrastructure
-        components, we ensure seamless supply and delivery tailored to your
-        requirements—helping you stay connected and ahead in today’s fastpaced
-        world.
+        We bridges cutting-edge technology supply and full-service ICT
+        infrastructure solutions—spanning communication systems, computing,
+        networking, security, auxiliary and audio-visual. With decades of
+        experience and a customer-first approach, we are equipped to deliver
+        robust, customized, and scalable solutions tailored to each
+        organization’s evolving needs
       </p>
       <a
         href="/product"
@@ -313,9 +326,9 @@
 
 <!--news and update -->
 <section
-  class="py-8 pb-16 px-4 md:pt-16 md:px-12 grid gap-8 md:grid-cols-[2fr_3fr] max-w-7xl mx-auto"
+  class="py-8 pb-16 px-4 md:pt-16 md:px-12 grid gap-4 md:gap-8 max-w-7xl mx-auto"
 >
-  <div class="text-left w-full">
+  <div class="text-left md:text-center w-full">
     <div class="clients-text-wrapper">
       <h2 class="text-2xl md:text-3xl font-bold my-2 text-[#0a0e30]">
         NEWS & UPDATES
@@ -327,21 +340,43 @@
     </div>
   </div>
 
-  <ul class="grid md:grid-cols-2 gap-4">
+  <ul class="grid md:grid-cols-3 gap-4">
     {#each news as n}
-      <li class="bg-white p-4 rounded-2xl shadow-xl/20">
+      <li class="bg-white rounded-2xl shadow-xl/50 overflow-hidden">
         <div>
-          <img
-            class="block w-full object-cover w-full h-[350px] rounded-xl"
-            src={n.src}
-            alt={n.title}
-            width="350"
-            height="350"
-          />
+          <button
+            class="p-0 m-0 outline-none"
+            onclick={() => (showModal = true)}
+          >
+            <img
+              class="block w-full object-cover w-full"
+              src={n.src}
+              alt={n.title}
+              width="350"
+              height="350"
+            />
+          </button>
         </div>
-        <h3 class="text-xl mt-4">{n.title}</h3>
-        <p class="text-base mt-1">{n.excerpt}</p>
+        <div class="p-4">
+          <h3 class="text-lg text-[#0a0e30]">{n.title}</h3>
+          {#if n.excerpt}
+            <p class="text-base mt-1">{n.excerpt}</p>
+          {/if}
+        </div>
       </li>
+      {#if showModal}
+        <div
+          role="button"
+          tabindex="0"
+          class="fixed inset-0 z-50 bg-black/50 bg-opacity-70 flex items-center justify-center px-4"
+          onclick={() => (showModal = false)}
+          onkeypress={() => {}}
+        >
+          <div class="max-w-3xl max-h-[90vh] overflow-auto">
+            <img src={n.src} alt={n.title} class="rounded-xl w-full h-auto" />
+          </div>
+        </div>
+      {/if}
     {/each}
   </ul>
 </section>

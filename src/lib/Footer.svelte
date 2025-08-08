@@ -67,7 +67,7 @@
     <ul class="mt-12 flex justify-center gap-6 md:gap-8">
       <li>
         <a
-          href="https://www.facebook.com/profile.php?id=61575275860907"
+          href="https://www.linkedin.com/company/ic-best-link-telecom-corporation/"
           rel="noreferrer"
           target="_blank"
           class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
